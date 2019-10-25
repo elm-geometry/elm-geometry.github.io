@@ -79,7 +79,8 @@ using an `elm-units` [`Rate`][rate] quantity value:
 
 ```elm
 pixelsPerMeter =
-    Pixels.pixels 20 |> Quantity.per (Length.meters 1)
+    Pixels.pixels 20
+        |> Quantity.per (Length.meters 1)
 ```
 
 Then we can convert back and forth using functions such as `Point2d.at` and
