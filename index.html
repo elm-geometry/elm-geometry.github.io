@@ -11,7 +11,13 @@
         console.log("No service worker registered.");
       }
     </script>
-  <link rel="shortcut icon" href="/assets/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="manifest" href="/assets/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="elm-geometry guide"><link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/assets/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="elm-geometry guide"><script type="text/javascript" src="/main.js"></script><style>@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700|Source+Code+Pro:400,700);</style><style>
+  <link rel="shortcut icon" href="/assets/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="manifest" href="/assets/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="elm-geometry guide"><link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/assets/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="elm-geometry guide"><script type="text/javascript" src="/main.js"></script><style>@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700|Source+Code+Pro:400,700);</style><style>/* Note that this min-width value should be kept in sync with the maxWidth value
+   in Main.elm (should be roughly 120px more) */
+@media screen and (min-width: 720px) {
+    html {
+        margin-left: calc(100vw - 100%) !important;
+    }
+}
 </style><meta name="generator" content="elm-pages v1.0.36"><link rel="canonical" href="https://ianmackenzie.github.io/elm-geometry/guide/"><meta name="description" content="High-level guide to the elm-geometry package"><meta property="og:image" content="https://ianmackenzie.github.io/elm-geometry/guide/images/cube.png"><meta property="og:image:secure_url" content="https://ianmackenzie.github.io/elm-geometry/guide/images/cube.png"><meta property="og:image:alt" content="elm-geometry logo"><meta property="og:title" content="elm-geometry guide"><meta property="og:url" content="https://ianmackenzie.github.io/elm-geometry/guide/"><meta property="og:description" content="High-level guide to the elm-geometry package"><meta property="og:site_name" content="elm-geometry guide"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="elm-geometry guide"><meta property="twitter:description" content="High-level guide to the elm-geometry package"><meta property="twitter:image" content="https://ianmackenzie.github.io/elm-geometry/guide/images/cube.png"><meta property="twitter:image:alt" content="elm-geometry logo"><meta property="og:type" content="website"><title>elm-geometry guide</title></head>
 
   <body><div data-url="http://localhost:8000/"><div class="bg-255-255-255-0 fc-0-0-0-255 font-size-20 font-open-sanshelveticaverdanasans-serif s e wf ui s e"><div><style>@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {.s.r > .s { flex-basis: auto !important; } .s.r > .s.ctr { flex-basis: auto !important; }}
@@ -168,6 +174,10 @@ html,body{height:100%;padding:0;margin:0;}.s.e.ic{display:block;}.s:focus{outlin
   margin-bottom: -4px;
 }.fc-41-60-75-255{
   color: rgba(41,60,75,1);
+}.bg-238-238-238-255{
+  background-color: rgba(238,238,238,1);
+}.height-px-1px{
+  height : 1px;
 }.height-px-24px{
   height : 24px;
 }.fc-14-105-163-255{
@@ -209,14 +219,41 @@ html,body{height:100%;padding:0;margin:0;}.s.e.ic{display:block;}.s:focus{outlin
   height: 0;
   width: 0;
   margin-bottom: -3px;
-}.max-width-624{
-  max-width: 624px;
-}.bc-96-181-204-255{
-  border-color: rgba(96,181,204,1);
-}.b-0-0-2-0{
-  border-width: 0px 0px 2px 0px;
-}.bg-238-238-238-255{
-  background-color: rgba(238,238,238,1);
+}.spacing-12-12.r > .s + .s{
+  margin-left: 12px;
+}.spacing-12-12.wrp.r > .s{
+  margin: 6px 6px;
+}.spacing-12-12.c > .s + .s{
+  margin-top: 12px;
+}.spacing-12-12.pg > .s + .s{
+  margin-top: 12px;
+}.spacing-12-12.pg > .al{
+  margin-right: 12px;
+}.spacing-12-12.pg > .ar{
+  margin-left: 12px;
+}.spacing-12-12.p{
+  line-height: calc(1em + 12px);
+}textarea.s.spacing-12-12{
+  line-height: calc(1em + 12px);
+  height: calc(100% + 12px);
+}.spacing-12-12.p > .al{
+  margin-right: 12px;
+}.spacing-12-12.p > .ar{
+  margin-left: 12px;
+}.spacing-12-12.p::after{
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  margin-top: -6px;
+}.spacing-12-12.p::before{
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  margin-bottom: -6px;
+}.max-width-600{
+  max-width: 600px;
 }.font-open-sanshelveticaverdanasans-serif{
   font-family: "Open Sans", "Helvetica", "Verdana", sans-serif;
   font-feature-settings: ;
@@ -231,8 +268,8 @@ html,body{height:100%;padding:0;margin:0;}.s.e.ic{display:block;}.s:focus{outlin
 }.s:focus .focusable, .s.focusable:focus{
   box-shadow: 0px 0px 0px 3px rgba(155,203,255,1);
   outline: none;
-}</style></div><div class="hc s c wf ct cl"><div class="hc bg-238-238-238-255 b-0-0-2-0 bc-96-181-204-255 s e wf"><div class="hc p-12 ah cx s r max-width-624 wf cl ccy"><div class="hc ah al av cy spacing-6-6 s r wc cl ccy"><a class="hc av cy ff-source-sans-prosans-serif font-size-24 fc-14-105-163-255 s e wc ccx ccy lnk" href="/" rel="noopener noreferrer"><div class="s t wf hf">elm-geometry</div></a></div><u class="s e ctr ccy acr"><div class="hc ah ar av cy spacing-6-6 s r wc cl ccy"><a class="hc av cy s e wc ccx ccy lnk" href="https://package.elm-lang.org/packages/ianmackenzie/elm-geometry/latest" rel="noopener noreferrer"><div class="he height-px-24px s e ic"><img class="he height-px-24px s e" src="/images/elm.svg" alt="elm-geometry documentation"></div></a><a class="hc av cy s e wc ccx ccy lnk" href="https://github.com/ianmackenzie/elm-geometry" rel="noopener noreferrer"><div class="he height-px-24px s e ic"><img class="he height-px-24px s e" src="/images/github.svg" alt="elm-geometry source"></div></a></div></u></div></div><div class="hc p-12 ah cx s e max-width-624 wf"><main class="hc ff-source-sans-prosans-serif font-size-16 fc-41-60-75-255 s c wf ct cl"><div class="s pg wf"><div class="spacing-8-8 s p wf"><div class="s t wc hc">This site contains a collection of articles discussing different aspects of the
+}</style></div><div class="hc ah cx spacing-12-12 p-12 s c max-width-600 wf ct cl"><div class="hc spacing-6-6 s r wf cl ccy"><a class="hc ah al av cy ff-source-sans-prosans-serif font-size-24 fc-14-105-163-255 s e wc ccx ccy lnk" href="/" rel="noopener noreferrer"><div class="s t wf hf">elm-geometry</div></a><u class="s e ctr ccy acr"><div class="hc ah ar av cy spacing-6-6 s r wc cl ccy"><a class="hc av cy s e wc ccx ccy lnk" href="https://package.elm-lang.org/packages/ianmackenzie/elm-geometry/latest" rel="noopener noreferrer"><div class="he height-px-24px s e ic"><img class="he height-px-24px s e" src="/images/elm.svg" alt="elm-geometry documentation"></div></a><a class="hc av cy s e wc ccx ccy lnk" href="https://github.com/ianmackenzie/elm-geometry" rel="noopener noreferrer"><div class="he height-px-24px s e ic"><img class="he height-px-24px s e" src="/images/github.svg" alt="elm-geometry source"></div></a></div></u></div><div class="he height-px-1px bg-238-238-238-255 s e wf"></div><main class="hc ff-source-sans-prosans-serif font-size-16 fc-41-60-75-255 s c wf ct cl"><div class="s pg wf"><div class="spacing-8-8 s p wf"><div class="s t wc hc">This site contains a collection of articles discussing different aspects of the
 </div><a class="hc fc-14-105-163-255 s e wc ccx ccy lnk" href="https://package.elm-lang.org/packages/ianmackenzie/elm-geometry/latest/" rel="noopener noreferrer"><div class="s t wf hf">elm-geometry</div></a><div class="s t wc hc">
 package. It is primarily intended to be linked to from </div><a class="hc fc-14-105-163-255 s e wc ccx ccy lnk" href="https://package.elm-lang.org/packages/ianmackenzie/elm-geometry/latest/" rel="noopener noreferrer"><div class="s t wf hf">the package
 documentation</div></a><div class="s t wc hc">
-but you are welcome to browse around if you wish!</div></div><div class="he height-px-18px s e wc"></div><div class="hc spacing-10-10 s c wf ct cl"><div class="hc s r wf cl ccy"><div class="hc av at s e wc"><div class="hc pad-0-8-0-16 s e wc"><svg width="6" height="16"><circle cx="3" cy="9.5" r="3" fill="black" stroke="none"></circle></svg></div></div><div class="s pg wf"><div class="spacing-8-8 s p wf"><a class="hc fc-14-105-163-255 s e wc ccx ccy lnk" href="/interop" rel="noopener noreferrer"><div class="s t wf hf">Interop</div></a></div></div></div><div class="hc s r wf cl ccy"><div class="hc av at s e wc"><div class="hc pad-0-8-0-16 s e wc"><svg width="6" height="16"><circle cx="3" cy="9.5" r="3" fill="black" stroke="none"></circle></svg></div></div><div class="s pg wf"><div class="spacing-8-8 s p wf"><a class="hc fc-14-105-163-255 s e wc ccx ccy lnk" href="/transformations" rel="noopener noreferrer"><div class="s t wf hf">Transformations</div></a></div></div></div><div class="hc s r wf cl ccy"><div class="hc av at s e wc"><div class="hc pad-0-8-0-16 s e wc"><svg width="6" height="16"><circle cx="3" cy="9.5" r="3" fill="black" stroke="none"></circle></svg></div></div><div class="s pg wf"><div class="spacing-8-8 s p wf"><a class="hc fc-14-105-163-255 s e wc ccx ccy lnk" href="/units-and-coordinate-systems" rel="noopener noreferrer"><div class="s t wf hf">Units and coordinate systems</div></a></div></div></div></div></div></main></div></div></div></div></body></html>
+but you are welcome to browse around if you wish!</div></div><div class="he height-px-18px s e wc"></div><div class="hc spacing-10-10 s c wf ct cl"><div class="hc s r wf cl ccy"><div class="hc av at s e wc"><div class="hc pad-0-8-0-16 s e wc"><svg width="6" height="16"><circle cx="3" cy="9.5" r="3" fill="black" stroke="none"></circle></svg></div></div><div class="s pg wf"><div class="spacing-8-8 s p wf"><a class="hc fc-14-105-163-255 s e wc ccx ccy lnk" href="/interop" rel="noopener noreferrer"><div class="s t wf hf">Interop</div></a></div></div></div><div class="hc s r wf cl ccy"><div class="hc av at s e wc"><div class="hc pad-0-8-0-16 s e wc"><svg width="6" height="16"><circle cx="3" cy="9.5" r="3" fill="black" stroke="none"></circle></svg></div></div><div class="s pg wf"><div class="spacing-8-8 s p wf"><a class="hc fc-14-105-163-255 s e wc ccx ccy lnk" href="/transformations" rel="noopener noreferrer"><div class="s t wf hf">Transformations</div></a></div></div></div><div class="hc s r wf cl ccy"><div class="hc av at s e wc"><div class="hc pad-0-8-0-16 s e wc"><svg width="6" height="16"><circle cx="3" cy="9.5" r="3" fill="black" stroke="none"></circle></svg></div></div><div class="s pg wf"><div class="spacing-8-8 s p wf"><a class="hc fc-14-105-163-255 s e wc ccx ccy lnk" href="/units-and-coordinate-systems" rel="noopener noreferrer"><div class="s t wf hf">Units and coordinate systems</div></a></div></div></div></div></div></main></div></div></div></body></html>
