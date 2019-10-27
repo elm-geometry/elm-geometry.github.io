@@ -4,7 +4,9 @@ workbox.core.skipWaiting();
 workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
 workbox.routing.registerNavigationRoute(
-  workbox.precaching.getCacheKeyForURL("/index.html")
+  workbox.precaching.getCacheKeyForURL("/index.html"), {
+    blacklist: [/admin/]
+  }
 );
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.gstatic\.com/,
